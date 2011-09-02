@@ -13,7 +13,16 @@ private:
 	int tag;
 public:
 	Vertex();
+	Vertex(int c, int t)
+	{
+		color = c;
+		tag = t;
+	}
 	
+	void addNeighbor(int n)
+	{
+		neighbors.push_back(n);
+	}
 	vector<int>& getNeighbors()
 	{
 		return neighbors;

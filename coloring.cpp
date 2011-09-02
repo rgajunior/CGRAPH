@@ -16,7 +16,7 @@ Graph& Coloring::maxCliqueRec(Graph& G, Graph& C, Graph& best, int ub)
 
 	Vertex v = G.getMaxDegreeVertex();
 
-	Graph G1 = G.inducedByVertexGraph(v.getNeighbors());
+	Graph* g1 = G.inducedByVertexGraph(v.getNeighbors());
 	//return 0;
 }
 

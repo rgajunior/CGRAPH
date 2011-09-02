@@ -1,7 +1,7 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
-#include <list>
+#include <vector>
 #include "vertex.h"
 
 using namespace std;
@@ -9,15 +9,16 @@ using namespace std;
 class Graph
 {
 private:
-	list<Vertex> vertices;
-
+	vector<Vertex> vertices;
+	void addVertex(Vertex&);
 public:
-	Graph();
+	Graph(){};
+	Graph(char* fileName);
 
 	Vertex& getMaxDegreeVertex();
 	bool isEmpty() const;
 	int size() const;
-	Graph& inducedByVertexGraph(vector<int>);
+	Graph* inducedByVertexGraph(vector<int>);
 };
 
 #endif
